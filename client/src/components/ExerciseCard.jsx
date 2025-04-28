@@ -8,7 +8,7 @@ import {
 } from '@mui/material';
 import axios from 'axios';
 
-const ExerciseCard = ({ exercise, user }) => {
+const ExerciseCard = ({ exercise, user, onAddToRoutine }) => {
   const [showInstructions, setShowInstructions] = useState(false);
   const [showAddButton, setShowAddButton] = useState(false);
 
@@ -22,16 +22,6 @@ const ExerciseCard = ({ exercise, user }) => {
       }
       return newShowInstructions;
     });
-  };
-
-  const handleAddToRoutine = async () => {
-    try {
-      await axios.post(`/api/users/${user._id}`, { exercise });
-      alert('Exercise added to routine!');
-    } catch (error) {
-      console.error('Error adding exercise to routine:', error);
-      alert('Failed to add exercise to routine.');
-    }
   };
 
   const formatInstructions = (instructions) => instructions
@@ -85,9 +75,10 @@ const ExerciseCard = ({ exercise, user }) => {
           {showInstructions ? 'Show Less' : 'Learn More'}
         </Button>
         {showAddButton && (
-          <Button size="small" color="secondary" onClick={handleAddToRoutine}>
-            Add to Routine
-          </Button>
+        //onAddToRoutine is passed from HomePage
+//nowcalls correct parent function
+<Button onClick={() => onAddToRoutine(exercise)}>Add to Routine</Button>
+
         )}
       </CardActions>
     </Card>

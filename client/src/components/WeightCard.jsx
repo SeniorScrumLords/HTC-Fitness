@@ -41,6 +41,7 @@ const WeightCard = ({
         setDate(dayjs());
         setDateWeight('');
       } catch (error) {
+        console.log(error);
         throw new Error(error);
       }
     }
@@ -88,7 +89,7 @@ const WeightCard = ({
         <CardContent>
           <Typography variant='h4'>{title}</Typography>
           <Typography variant='subtitle1'>
-            {weight ? `${weight} lbs.` : `No ${title.toLowerCase()} set.`}
+            {weight ? `${weight} lbs.` : `No ${title} set.`}
           </Typography>
         </CardContent>
         <CardContent>

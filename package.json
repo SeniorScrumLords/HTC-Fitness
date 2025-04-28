@@ -9,10 +9,12 @@
     "seed": "node ./server/db/seed.js"
   },
   "dependencies": {
+    "@emotion/cache": "^11.14.0",
     "@emotion/react": "^11.5.0",
     "@emotion/styled": "^11.13.0",
     "@mui/icons-material": "^6.0.2",
     "@mui/material": "^6.0.1",
+    "@mui/material-nextjs": "^6.4.3",
     "@mui/x-charts": "^7.15.0",
     "@mui/x-date-pickers": "^7.16.0",
     "axios": "^1.7.5",
@@ -25,7 +27,7 @@
     "passport-google-oauth20": "^2.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.26.1"
+    "react-router-dom": "^7.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",

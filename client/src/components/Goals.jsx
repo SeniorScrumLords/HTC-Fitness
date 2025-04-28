@@ -6,7 +6,7 @@ import {
   Snackbar,
 } from '@mui/material';
 import dayjs from 'dayjs';
-import axios from 'axios';
+import axios from 'axios'; 
 import Chart from './Chart.jsx';
 import WeightCard from './WeightCard.jsx';
 
